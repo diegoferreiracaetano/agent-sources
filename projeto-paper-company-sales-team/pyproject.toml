@@ -1,0 +1,12 @@
+[project]
+name = "paper-company-sales-team"
+version = "0.1.0"
+description = "An agentic sales team workflow for a paper company."
+requires-python = ">=3.10"
+authors = [{ name = "Paper Company Sales Team" }]
+
+[project.scripts]
+paper-sales-team = "paper_sales_team.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

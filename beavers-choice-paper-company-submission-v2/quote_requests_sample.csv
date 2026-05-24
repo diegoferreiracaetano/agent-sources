@@ -1,0 +1,21 @@
+request_id,customer_name,paper_type,quantity,request_type,max_unit_price,needs_delivery_by
+REQ-001,Maple School,copy_paper,120,quote,5.50,2026-06-26
+REQ-002,Trail Print Shop,cardstock,180,order,11.20,2026-06-30
+REQ-003,Green Office Co,recycled_paper,350,order,6.00,2026-06-29
+REQ-004,Riverside Studio,glossy_photo,420,order,16.00,2026-06-27
+REQ-005,City Library,copy_paper,900,order,5.10,2026-06-28
+REQ-006,Oak Accounting,cardstock,50,inventory,12.00,2026-06-25
+REQ-007,Bright Events,glossy_photo,60,quote,15.80,2026-07-02
+REQ-008,North Clinic,recycled_paper,700,order,6.30,2026-07-01
+REQ-009,Cedar Arts,copy_paper,75,quote,5.60,2026-07-03
+REQ-010,Summit Legal,legal_paper,220,order,5.95,2026-07-05
+REQ-011,Valley Design,glossy_photo,90,quote,15.90,2026-07-04
+REQ-012,Forest Nonprofit,recycled_paper,100,quote,6.20,2026-07-03
+REQ-013,Metro Copy,copy_paper,650,order,4.90,2026-07-06
+REQ-014,Northwest Bank,legal_paper,600,order,5.70,2026-07-08
+REQ-015,Art Fair Co,glossy_photo,190,order,14.75,2026-07-09
+REQ-016,County Office,copy_paper,80,inventory,5.50,2026-07-03
+REQ-017,Blue Ridge School,cardstock,300,quote,11.00,2026-07-10
+REQ-018,Clinic West,recycled_paper,500,order,5.75,2026-07-07
+REQ-019,Small Studio,glossy_photo,30,quote,16.50,2026-07-11
+REQ-020,Legal Aid Group,legal_paper,75,quote,6.00,2026-07-12

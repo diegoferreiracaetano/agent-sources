@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill: #17202a; }
+      .box { fill: #f8fbff; stroke: #2e5f8a; stroke-width: 2; rx: 8; }
+      .agent { fill: #e9f4ff; stroke: #1f5f99; stroke-width: 2; rx: 8; }
+      .tool { fill: #f5fff0; stroke: #447a32; stroke-width: 2; rx: 8; }
+      .data { fill: #fff8e8; stroke: #9a6b00; stroke-width: 2; rx: 8; }
+      .txt { font: 16px Arial, sans-serif; fill: #17202a; }
+      .small { font: 13px Arial, sans-serif; fill: #17202a; }
+      .label { font: 700 17px Arial, sans-serif; fill: #17202a; }
+      .arrow { stroke: #34495e; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="55" class="title">Beaver's Choice Paper Company Multi-Agent Workflow</text>
+  <text x="50" y="84" class="txt">Maximum five agents: one orchestrator plus four focused worker agents. Text requests enter from CSV or terminal and produce customer-safe responses.</text>
+
+  <rect x="55" y="135" width="220" height="90" class="box"/>
+  <text x="80" y="166" class="label">Customer Request</text>
+  <text x="80" y="191" class="small">quote_requests_sample.csv</text>
+  <text x="80" y="211" class="small">paper type, quantity, request type</text>
+
+  <rect x="360" y="120" width="300" height="130" class="agent"/>
+  <text x="385" y="153" class="label">OrchestratorAgent</text>
+  <text x="385" y="181" class="small">Classifies request intent</text>
+  <text x="385" y="201" class="small">Delegates inventory, quote, sale</text>
+  <text x="385" y="221" class="small">Combines final customer response</text>
+
+  <rect x="755" y="115" width="270" height="120" class="agent"/>
+  <text x="780" y="148" class="label">InventoryAgent</text>
+  <text x="780" y="176" class="small">Checks current stock</text>
+  <text x="780" y="196" class="small">Assesses reorder need</text>
+  <text x="780" y="216" class="small">Estimates supplier delivery</text>
+
+  <rect x="755" y="290" width="270" height="120" class="agent"/>
+  <text x="780" y="323" class="label">QuotingAgent</text>
+  <text x="780" y="351" class="small">Uses history and base prices</text>
+  <text x="780" y="371" class="small">Applies bulk discounts</text>
+  <text x="780" y="391" class="small">Returns explainable quote</text>
+
+  <rect x="755" y="465" width="270" height="120" class="agent"/>
+  <text x="780" y="498" class="label">SalesAgent</text>
+  <text x="780" y="526" class="small">Approves or declines order</text>
+  <text x="780" y="546" class="small">Creates sale transaction</text>
+  <text x="780" y="566" class="small">Updates stock and cash</text>
+
+  <rect x="755" y="640" width="270" height="120" class="agent"/>
+  <text x="780" y="673" class="label">FinanceAgent</text>
+  <text x="780" y="701" class="small">Checks cash balance</text>
+  <text x="780" y="721" class="small">Generates run report</text>
+  <text x="780" y="741" class="small">Supports reorder affordability</text>
+
+  <rect x="1100" y="100" width="250" height="160" class="tool"/>
+  <text x="1120" y="130" class="label">pydantic-ai Tools</text>
+  <text x="1120" y="158" class="small">inventory_check_tool()</text>
+  <text x="1120" y="178" class="small">get_all_inventory + get_stock_level</text>
+  <text x="1120" y="198" class="small">get_supplier_delivery_date + cash</text>
+  <text x="1120" y="218" class="small">reorder_tool uses create_transaction</text>
+  <text x="1120" y="238" class="small">Purpose: stock + reorder decisions</text>
+
+  <rect x="1100" y="305" width="250" height="110" class="tool"/>
+  <text x="1120" y="335" class="label">pydantic-ai Tool</text>
+  <text x="1120" y="363" class="small">quote_generation_tool()</text>
+  <text x="1120" y="383" class="small">Purpose: competitive pricing</text>
+  <text x="1120" y="403" class="small">with bulk discount rationale</text>
+
+  <rect x="1100" y="480" width="250" height="110" class="tool"/>
+  <text x="1120" y="510" class="label">pydantic-ai Tool</text>
+  <text x="1120" y="538" class="small">sales_finalization_tool()</text>
+  <text x="1120" y="558" class="small">Purpose: fulfill orders</text>
+  <text x="1120" y="578" class="small">and update SQLite state</text>
+
+  <rect x="1100" y="655" width="250" height="110" class="tool"/>
+  <text x="1120" y="685" class="label">pydantic-ai Tool</text>
+  <text x="1120" y="713" class="small">financial_report_tool()</text>
+  <text x="1120" y="733" class="small">generate_financial_report()</text>
+  <text x="1120" y="753" class="small">Purpose: cash/report visibility</text>
+
+  <rect x="360" y="670" width="300" height="95" class="data"/>
+  <text x="385" y="703" class="label">SQLite Database</text>
+  <text x="385" y="731" class="small">inventory, quote_history,</text>
+  <text x="385" y="751" class="small">transactions, cash</text>
+
+  <rect x="55" y="650" width="220" height="115" class="box"/>
+  <text x="80" y="683" class="label">Outputs</text>
+  <text x="80" y="711" class="small">Customer response</text>
+  <text x="80" y="731" class="small">test_results.csv</text>
+  <text x="80" y="751" class="small">Financial report</text>
+
+  <path d="M275 180 L360 180" class="arrow"/>
+  <path d="M660 170 L755 170" class="arrow"/>
+  <path d="M660 190 C705 215 705 330 755 350" class="arrow"/>
+  <path d="M660 210 C705 270 705 505 755 525" class="arrow"/>
+  <path d="M660 230 C705 330 705 680 755 700" class="arrow"/>
+
+  <path d="M1025 175 L1100 175" class="arrow"/>
+  <path d="M1025 350 L1100 360" class="arrow"/>
+  <path d="M1025 525 L1100 535" class="arrow"/>
+  <path d="M1025 700 L1100 710" class="arrow"/>
+
+  <path d="M1225 260 C1225 820 510 820 510 765" class="arrow"/>
+  <path d="M1225 415 C1225 820 510 820 510 765" class="arrow"/>
+  <path d="M1225 590 C1225 820 510 820 510 765" class="arrow"/>
+  <path d="M1225 765 C1225 820 510 820 510 765" class="arrow"/>
+
+  <path d="M360 715 L275 715" class="arrow"/>
+  <path d="M360 205 C285 300 190 525 165 650" class="arrow"/>
+
+  <text x="70" y="830" class="small">Framework choice: real pydantic-ai Agents with TestModel; Orchestrator delegates through agent.run_sync() and registered tools.</text>
+</svg>

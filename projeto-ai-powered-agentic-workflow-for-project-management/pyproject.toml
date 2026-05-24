@@ -1,0 +1,16 @@
+[project]
+name = "ai-powered-agentic-workflow-for-project-management"
+version = "0.1.0"
+description = "An AI-inspired agentic workflow for project management."
+requires-python = ">=3.10"
+authors = [{ name = "Agentic PM" }]
+dependencies = [
+  "openai>=1.0.0",
+  "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+agentic-pm = "agentic_pm.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

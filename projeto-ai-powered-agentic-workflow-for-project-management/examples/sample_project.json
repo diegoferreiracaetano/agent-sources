@@ -1,0 +1,72 @@
+{
+  "name": "Customer Portal Modernization",
+  "goal": "Launch a faster customer portal with clearer onboarding and self-service workflows.",
+  "timeline_weeks": 4,
+  "team": [
+    {
+      "name": "Ana",
+      "skills": ["frontend", "ux", "testing"],
+      "capacity": 8
+    },
+    {
+      "name": "Bruno",
+      "skills": ["backend", "api", "security"],
+      "capacity": 7
+    },
+    {
+      "name": "Carla",
+      "skills": ["data", "analytics", "product"],
+      "capacity": 5
+    }
+  ],
+  "work_items": [
+    {
+      "id": "PM-1",
+      "title": "Map onboarding journey",
+      "description": "Identify gaps in the current onboarding flow.",
+      "impact": 5,
+      "urgency": 4,
+      "effort": 3,
+      "skills": ["ux", "product"]
+    },
+    {
+      "id": "PM-2",
+      "title": "Create self-service API",
+      "description": "Expose account actions through a secure API.",
+      "impact": 5,
+      "urgency": 5,
+      "effort": 5,
+      "skills": ["backend", "api", "security"]
+    },
+    {
+      "id": "PM-3",
+      "title": "Build customer dashboard",
+      "description": "Implement the main portal dashboard.",
+      "impact": 4,
+      "urgency": 4,
+      "effort": 4,
+      "skills": ["frontend", "ux"],
+      "dependencies": ["PM-2"]
+    },
+    {
+      "id": "PM-4",
+      "title": "Add activation analytics",
+      "description": "Track activation milestones and drop-off points.",
+      "impact": 3,
+      "urgency": 3,
+      "effort": 2,
+      "skills": ["data", "analytics"],
+      "dependencies": ["PM-1"]
+    },
+    {
+      "id": "PM-5",
+      "title": "Regression test release",
+      "description": "Test major workflows before launch.",
+      "impact": 4,
+      "urgency": 5,
+      "effort": 3,
+      "skills": ["testing"],
+      "dependencies": ["PM-2", "PM-3", "PM-4"]
+    }
+  ]
+}

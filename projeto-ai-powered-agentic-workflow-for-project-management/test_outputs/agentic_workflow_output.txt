@@ -1,0 +1,80 @@
+Command: python3 agentic_workflow.py
+
+# AI-Powered Agentic Workflow for Project Management
+
+Pilot Product: Email Router
+
+## Workflow Steps
+
+Processing step: Create user stories from the product specification and target users.
+Step Result:
+As a support coordinator, I want incoming emails classified by intent and urgency so that I can reduce manual triage time.
+As a support agent, I want each email routed to the correct queue with an explanation so that I can trust and act on the assignment.
+As a technical project manager, I want routing history and analytics so that I can audit decisions and identify bottlenecks.
+
+Processing step: Define product features using the required feature structure.
+Step Result:
+Feature Name: Email Ingestion Connector
+Description: Captures email metadata and body text from the mailbox or ticketing connector.
+Key Functionality: Normalize sender, subject, body, timestamp, and customer tier.
+User Benefit: Gives teams reliable input for automated routing.
+
+Feature Name: Routing Decision Engine
+Description: Classifies and routes emails to the right operational queue.
+Key Functionality: Detect category, urgency, customer tier, confidence, and explanation.
+User Benefit: Reduces manual triage and improves response consistency.
+
+Processing step: Create detailed engineering tasks with dependencies and acceptance criteria.
+Step Result:
+Task ID: ER-001
+Task Title: Build email ingestion adapter
+Related User Story: As a support coordinator, I want incoming emails classified by intent and urgency so that I can reduce manual triage time.
+Description: Implement connector logic to ingest metadata and body text from the ticketing workflow.
+Acceptance Criteria: Metadata and body are normalized and available for classification.
+Estimated Effort: 3 days
+Dependencies: Ticketing connector credentials
+
+Task ID: ER-002
+Task Title: Implement routing decision service
+Related User Story: As a support agent, I want each email routed to the correct queue with an explanation so that I can trust and act on the assignment.
+Description: Build service that maps category, urgency, and customer tier to routing queues.
+Acceptance Criteria: Service returns queue, explanation, confidence score, and rule or model version.
+Estimated Effort: 5 days
+Dependencies: Email ingestion adapter
+
+## Final Output
+
+### Completed Step 1
+As a support coordinator, I want incoming emails classified by intent and urgency so that I can reduce manual triage time.
+As a support agent, I want each email routed to the correct queue with an explanation so that I can trust and act on the assignment.
+As a technical project manager, I want routing history and analytics so that I can audit decisions and identify bottlenecks.
+
+### Completed Step 2
+Feature Name: Email Ingestion Connector
+Description: Captures email metadata and body text from the mailbox or ticketing connector.
+Key Functionality: Normalize sender, subject, body, timestamp, and customer tier.
+User Benefit: Gives teams reliable input for automated routing.
+
+Feature Name: Routing Decision Engine
+Description: Classifies and routes emails to the right operational queue.
+Key Functionality: Detect category, urgency, customer tier, confidence, and explanation.
+User Benefit: Reduces manual triage and improves response consistency.
+
+### Completed Step 3
+Task ID: ER-001
+Task Title: Build email ingestion adapter
+Related User Story: As a support coordinator, I want incoming emails classified by intent and urgency so that I can reduce manual triage time.
+Description: Implement connector logic to ingest metadata and body text from the ticketing workflow.
+Acceptance Criteria: Metadata and body are normalized and available for classification.
+Estimated Effort: 3 days
+Dependencies: Ticketing connector credentials
+
+Task ID: ER-002
+Task Title: Implement routing decision service
+Related User Story: As a support agent, I want each email routed to the correct queue with an explanation so that I can trust and act on the assignment.
+Description: Build service that maps category, urgency, and customer tier to routing queues.
+Acceptance Criteria: Service returns queue, explanation, confidence score, and rule or model version.
+Estimated Effort: 5 days
+Dependencies: Email ingestion adapter
+
+Exit code: 0

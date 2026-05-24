@@ -1,0 +1,41 @@
+Product: Email Router
+
+Problem Statement:
+InnovateNext receives a growing volume of customer and internal operational email. Messages are manually triaged by support coordinators, causing slow response times, inconsistent routing, and missed high-priority issues.
+
+Target Users:
+- Support coordinators who need faster triage.
+- Technical project managers who need visibility into routing logic and operational bottlenecks.
+- Customer support agents who need messages assigned to the correct queue.
+
+Goals:
+- Classify incoming emails by intent, urgency, customer tier, and required team.
+- Route each email to the correct queue with an explanation.
+- Escalate urgent or enterprise customer messages.
+- Provide an audit log of routing decisions.
+- Allow administrators to update routing rules without code changes.
+
+Non-Goals:
+- The pilot will not send outbound email responses automatically.
+- The pilot will not replace the existing ticketing system.
+
+Core Requirements:
+1. Ingest email metadata and body text from a mailbox or ticketing connector.
+2. Detect categories such as billing, technical support, account access, product feedback, and sales inquiry.
+3. Detect urgency signals such as outage, blocked user, security concern, refund request, or enterprise customer.
+4. Route emails to queues: Support Tier 1, Support Tier 2, Billing, Sales, Security, Product Feedback, or Escalations.
+5. Attach routing explanation, confidence score, and rule or model version.
+6. Store routing decision history for audit and analytics.
+7. Provide an admin configuration file or UI for queue rules and escalation thresholds.
+
+Success Metrics:
+- Reduce average manual triage time by 50%.
+- Achieve at least 85% correct initial routing in pilot review.
+- Ensure 100% of urgent enterprise messages receive escalation metadata.
+- Provide audit history for every routed message.
+
+Constraints:
+- Must integrate with the existing ticketing workflow.
+- Must protect customer data and avoid exposing sensitive content in logs.
+- Must support a human override for incorrect routing.
+- Must be observable through metrics and routing error reports.
