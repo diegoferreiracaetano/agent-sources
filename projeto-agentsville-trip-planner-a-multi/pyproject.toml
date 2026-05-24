@@ -1,0 +1,12 @@
+[project]
+name = "agentsville-trip-planner"
+version = "0.1.0"
+description = "A multi-agent travel assistant system."
+requires-python = ">=3.10"
+authors = [{ name = "AgentsVille" }]
+
+[project.scripts]
+agentsville-trip-planner = "agentsville_trip_planner.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
